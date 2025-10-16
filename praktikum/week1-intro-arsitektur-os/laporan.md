@@ -158,7 +158,8 @@ Di sini sistem punya hak penuh terhadap perangkat keras dan seluruh memori kompu
 - LINUX,(UBUNTU,Fedora, Debian, Android)
 - MS-DOS 
 - Unix(versi lama sperti system v)
-  contoh OS arsitektur Microkernel: 
+  
+   contoh OS arsitektur Microkernel: 
 - Minix
 - QNX
 - Mach(digunakan di MacOS dan IOS)
