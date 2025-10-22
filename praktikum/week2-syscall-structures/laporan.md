@@ -5,7 +5,7 @@ Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 ---
 
 ## Identitas
-- **Nama**   : Abdi Hanfi Alghifari 
+- **Nama**   : Abdi Hanafi Alghifari 
 - **NIM**    : 250320570
 - **Kelas**  : 1DSRA
 
