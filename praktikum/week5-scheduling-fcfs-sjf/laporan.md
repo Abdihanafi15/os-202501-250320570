@@ -1,30 +1,57 @@
 
 # Laporan Praktikum Minggu [X]
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
+Topik: [Manajemen Proses dan User di Linux]
 
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
+- **Nama**  : Abdi Hanafi Alghifari
+- **NIM**   : 250320570
+- **Kelas** : 1DSRA
 
 ---
 
 ## Tujuan
 Tuliskan tujuan praktikum minggu ini.  
-Contoh:  
-> Mahasiswa mampu menjelaskan fungsi utama sistem operasi dan peran kernel serta system call.
+
+> Mampu menjelaskan konsep proses dan user dalam sistem operasi Linux dan Menggunakan perintah untuk membuat dan mengelola user.
 
 ---
 
 ## Dasar Teori
 Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 
+1. Konsep proses dan user dalam sistem operasi Linux.
+2. Fungsi proses init atau systemd dalam sistem Linux.
+3. Hubungan antara user management dan keamanan sistem Linux.
+4. Mengelola user, group, serta hak akses pengguna.
 ---
 
 ## Langkah Praktikum
-1. Langkah-langkah yang dilakukan.  
+- Langkah-langkah yang dilakukan.  
+
+1. Setup Environment
+
+- Gunakan Linux (Ubuntu/WSL).
+- Pastikan Anda sudah login sebagai user non-root.
+    Siapkan folder kerja:
+
+       praktikum/week4-proses-user/
+
+2. Eksperimen 1 – Identitas User Jalankan perintah berikut:
+
+       whoami
+       id
+       groups
+
+- Jelaskan setiap output dan fungsinya.
+- Buat user baru (jika memiliki izin sudo):
+
+      sudo adduser praktikan
+      sudo passwd praktikan
+
+- Uji login ke user baru.
+
 2. Perintah yang dijalankan.  
 3. File dan kode yang dibuat.  
 4. Commit message yang digunakan.
