@@ -1,6 +1,7 @@
 
 # Laporan Praktikum Minggu [X]
-Topik: [Manajemen Proses dan User di Linux]
+Topik: [ scheduling-fcfs-sjf ]
+
 
 ---
 
@@ -110,17 +111,68 @@ Tuliskan potongan kode atau perintah utama:
 ## Tugas 
 
 - 2 skenario FCFS dan SJF
+![Screenshot hasil](screenshots/skenario%201.png)
 
+![Screenshot hasil](screenshots/Skenario%202.png)
 
-
+---
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/)
+
+1. Eksperimen 1 – FCFS (First Come First Served)
+
+- Urutan proses berdasarkan Arrival Time: P1 -> P2 -> P3 -> P4
+![Screenshot hasil](screenshots/FCFS%20.png)
+- Gantt Chart FCFS:
+```
+     | P1 | P4 | P3 | P2 |
+     0    5    12   18   20 
+
+```
+2. Eksperimen 2 - SJF (Shortest Job First)
+
+- Urutan proses berdasarkan Burst Time terpendek (dengan memperhatikan waktu kedatangan): 1 -> 4 -> 3 -> 2
+![Screenshot hasil](screenshots/SJF.png)
+- Gantt Chart
+```
+| P1 | P4 | P3 | P2 |
+0    5    7    13   20
+
+```
+Perbandingan hasil FCFS dan SJF:
+
+| Algoritma |	Avg Waiting Time |	Avg Turnaround Time |	Kelebihan |	Kekurangan |
+|-----------|--------------------|-----------------------|---------|------------------------|
+|FCFS | 7,25 | 12,25 | Sederhana dan mudah diterapkan |	Tidak efisien untuk proses panjang |
+| SJF | 4,75 | 9,75 | Optimal untuk job pendek |	Menyebabkan starvation pada job panjang | 
+
 
 ---
 
 ## Analisis
 
+- Perbandingan hasil rata-rata WT dan TAT antara FCFS & SJF.
+   
+   - Rata-rata waiting time FCFS : 7,25
+   - Rata-rata turnaround time FCFS : 12,25
+   - Rata-rata waiting time SJF : 4,75
+   - Rata-rata turnaround time SJF : 9,75
+
+  Jadi untuk rata-rata waiting time(Wt) dan Turnaround Time(TAT) SJF lebih rendah daripada FCFS. 
+
+- Jelaskan kondisi kapan SJF lebih unggul dari FCFS dan sebaliknya.
+
+  SJF lebih unggul saat proses-proses punya waktu eksekusi (burst   time) yang bervariasi ada yang cepat banget, ada yang lama banget.
+  Karena SJF akan mengerjakan proses yang paling cepat dulu, sehingga
+  Proses kecil gak perlu nunggu proses besar selesai.
+  Rata-rata waktu tunggu (waiting time) dan rata-rata waktu penyelesaian (turnaround time) jadi lebih kecil.
+
+
+  CFS lebih unggul atau lebih adil (fair) ketika:
+  Semua proses punya burst time hampir sama
+  Atau ketika waktu kedatangan (arrival time) sangat bervariasi
+  Karena FCFS menjalankan proses berdasarkan urutan datang, bukan durasi.
+  Artinya, tidak ada proses yang “disalip”, jadi sistem terasa lebih adil dan sederhana.
 
 ---
 
