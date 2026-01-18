@@ -1,6 +1,6 @@
 
 # Laporan Praktikum Minggu [9]
-Topik: [Simulasi Algoritma Penjadwalan CPU]
+Topik: [Simulasi scheduling CPU]
 
 ---
 
