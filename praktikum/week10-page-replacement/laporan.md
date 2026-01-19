@@ -156,23 +156,55 @@ Sertakan screenshot hasil percobaan atau diagram:
    - Mengganti page yang paling lama masuk ke memori
    - Tidak memperhatikan apakah page tersebut masih sering digunakan
    - Akibatnya, page yang masih dibutuhkan bisa terhapus
-   ➡ Hal ini menyebabkan page fault tambahan ketika page tersebut diakses kembali.
+
+ Hal ini menyebabkan page fault tambahan ketika page tersebut diakses kembali.
+
+2. Mengganti page yang paling lama tidak digunakan
+   - Mempertimbangkan riwayat akses
+   - Page yang sering diakses akan dipertahankan
+
+Kemungkinan page yang dibutuhkan masih ada di memori lebih besar, sehingga page fault lebih sedikit.
+
+- Analisis algoritma mana yang lebih efisien dan alasannya.
+
+Algoritma yang lebih efisien adalah LRU.  
+     Alasannya:
+- LRU menyimpan page yang sering digunakan dan hanya mengganti page yang sudah lama tidak dipakai.
+- Hal ini membuat jumlah page fault lebih sedikit.
+- FIFO hanya melihat urutan masuk page, sehingga bisa menghapus page yang masih dibutuhkan.
+
 
 
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+1. Page replacement diperlukan saat memori penuh dan terjadi page fault.
+2. FIFO mengganti page berdasarkan urutan masuk, sedangkan LRU berdasarkan pemakaian terakhir.
+3. Dari hasil simulasi, LRU menghasilkan page fault lebih sedikit dibanding FIFO.
+4. LRU lebih efisien karena mempertahankan page yang sering digunakan.
+5. FIFO lebih sederhana, tetapi kinerjanya kurang optimal dibanding LRU.
 
 ---
 
 ## Quiz
-1. [Pertanyaan 1]  
+1. [Apa perbedaan utama FIFO dan LRU?]  
    **Jawaban:**  
-2. [Pertanyaan 2]  
+
+ - FIFO (First In First Out)
+ FIFO mengganti page yang paling awal masuk ke memori tanpa mempertimbangkan frekuensi atau waktu terakhir penggunaan page tersebut.
+ - LRU (Least Recently Used)
+ LRU mengganti page yang paling lama tidak digunakan berdasarkan waktu akses terakhir.
+
+2. [Mengapa FIFO dapat menghasilkan Belady’s Anomaly?]  
    **Jawaban:**  
-3. [Pertanyaan 3]  
+  Belady’s Anomaly terjadi karena FIFO tidak mempertimbangkan frekuensi atau pola akses page, hanya urutan masuknya saja.
+
+3. [Mengapa LRU umumnya menghasilkan performa lebih baik dibanding FIFO?]  
    **Jawaban:**  
+  Karena program biasanya mengakses data yang sama secara berulang (locality of reference).
+  LRU mampu menjaga page yang sering dipakai tetap di memori, sehingga page fault lebih sedikit dibanding FIFO.
+  
+  jadi, LRU lebih efisien karena lebih pintar dalam menebak page mana yang akan dibutuhkan kembali.
 
 ---
 
